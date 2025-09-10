@@ -1,5 +1,3 @@
-// API Types for FlavorAI
-
 export interface LoginRequest {
   email: string;
   password: string;
@@ -54,7 +52,7 @@ export interface Recipe {
 
 export interface Rating {
   id: string;
-  value: number; // 1-5
+  value: number;
   comment?: string;
   recipeId: string;
   createdAt: string;
