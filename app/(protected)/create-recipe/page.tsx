@@ -70,6 +70,7 @@ export default function CreateRecipePage() {
       const validIngredients = ingredients.filter(
         (ing) => ing.name.trim() !== "" && ing.quantity > 0
       );
+      console.log(ingredients, validIngredients);
 
       const recipeData = {
         title: formData.title,
@@ -231,7 +232,7 @@ export default function CreateRecipePage() {
                         handleIngredientChange(
                           index,
                           "unit",
-                          parseInt(e.target.value) || 0
+                          e.target.value || "u"
                         )
                       }
                       id="unit"
